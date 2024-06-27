@@ -124,7 +124,7 @@ corepack_enable: true
 # supported constraint formats
 
 working_dir:
-  web: /var/www/html
+#   web: /var/www/html/web/
 #   web: /mnt/c/Users/shaya/OneDrive/Desktop/wsl/Wordpress-Composer-Starter-Kit/web/app/dp-timber-theme
 #   db: /home
 # would set the default working directory for the web and db services.
