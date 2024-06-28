@@ -3,6 +3,8 @@ import "bootstrap/scss/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
 import '../components/style.scss';
+// This CSS is only for Storybook
+import '../components/storybook/storybook.scss';
 
 // Add viewports for our example device widths.
 const deviceViewports = {
