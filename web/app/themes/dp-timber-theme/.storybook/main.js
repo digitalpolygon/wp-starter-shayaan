@@ -1,8 +1,11 @@
 /** @type { import('@storybook/html-webpack5').StorybookConfig } */
-const path = require('path');
+const path = require("path");
 
 const config = {
-  stories: ["../components/**/*.mdx", "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../components/**/*.mdx",
+    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-links",
@@ -11,7 +14,7 @@ const config = {
     // "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     {
-      name: '@storybook/addon-styling-webpack',
+      name: "@storybook/addon-styling-webpack",
       options: {
         rules: [
           {
@@ -23,14 +26,14 @@ const config = {
                 loader: "sass-loader",
                 options: {
                   sourceMap: true,
-                  implementation: require.resolve("sass")
-                }
+                  implementation: require.resolve("sass"),
+                },
               },
             ],
           },
-        ]
-      }
-    }
+        ],
+      },
+    },
   ],
   framework: {
     name: "@storybook/html-webpack5",
@@ -39,26 +42,32 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ['../assets'],
+  staticDirs: ["../assets"],
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.twig$/,
-      use: [
-        {
-          loader: 'twigjs-loader',
-          options: {},
-        },
-      ],
-    });
+    config.module.rules.push(
+      {
+        test: /\.twig$/,
+        use: [
+          {
+            loader: "twigjs-loader",
+            options: {},
+          },
+        ],
+      },
+      {
+        test: /\.yml$/,
+        use: "yaml-loader",
+      },
+    );
     const twigAlias = {
-      "@atoms": path.resolve(__dirname, '../', 'components/atoms'),
-      "@molecules": path.resolve(__dirname, '../', 'components/molecules'),
-      "@organisms": path.resolve(__dirname, '../', 'components/organisms'),
-      "@templates": path.resolve(__dirname, '../', 'components/templates'),
-      "@pages": path.resolve(__dirname, '../', 'components/pages'),
+      "@atoms": path.resolve(__dirname, "../", "components/atoms"),
+      "@molecules": path.resolve(__dirname, "../", "components/molecules"),
+      "@organisms": path.resolve(__dirname, "../", "components/organisms"),
+      "@templates": path.resolve(__dirname, "../", "components/templates"),
+      "@pages": path.resolve(__dirname, "../", "components/pages"),
     };
     Object.assign(config.resolve.alias, twigAlias);
     return config;
-  }
+  },
 };
 export default config;

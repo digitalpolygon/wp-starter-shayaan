@@ -1,7 +1,5 @@
 // Add global styling here.
-.sb-show-main.sb-main-padded {
-	padding: 0;
-}
+@import "./storybook/storybook.scss";
 
 body {
 	padding: 0;

@@ -1,5 +1,9 @@
 /** @type { import('@storybook/html').Preview } */
+import "bootstrap/scss/bootstrap.scss";
+import "bootstrap/dist/js/bootstrap.js";
+
 import '../components/style.scss';
+
 // Add viewports for our example device widths.
 const deviceViewports = {
   phone: {

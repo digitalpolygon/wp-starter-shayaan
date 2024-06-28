@@ -1,6 +1,5 @@
 import header from "./Header.twig";
 import menuData from "./menus.yml";
-import "./Header.scss";
 
 export default {
   title: "Organisms/Header",
