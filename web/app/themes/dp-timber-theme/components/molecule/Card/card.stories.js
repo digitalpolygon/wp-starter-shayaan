@@ -5,10 +5,11 @@ export default {
   title: "Molecule/Card",
   tags: ["autodocs"],
   argsTypes: {
-    cardImage: { control: 'text'},
-    cardTitle: { control: 'text'},
-    cardDescription: { control: 'text'},
-    cardDate: { control: 'date' },
+    cardHeader: { control: "text" },
+    cardImage: { control: "text" },
+    cardTitle: { control: "text" },
+    cardDescription: { control: "text" },
+    cardDate: { control: "date" },
   },
   render: ({ ...args }) => {
     return card({ ...args });
@@ -18,8 +19,9 @@ export default {
 export const Default = {};
 
 Default.args = {
-    cardImage: 'https://picsum.photos/seed/picsum/300/200',
-    cardTitle: 'Example Card Title',
-    cardDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    cardDate: new Date()
+  cardHeader: "StoryBook Header",
+  cardImage: "https://picsum.photos/seed/picsum/300/200",
+  cardTitle: "Example Card Title",
+  cardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  cardDate: new Date(),
 };
