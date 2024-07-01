@@ -1,0 +1,13 @@
+<section class="tiles">
+  {% for article in articles %}
+    <article style="background-image: url('{{ article.imageUrl }}');">
+      <header>
+        <h3>
+          <a href="{{ article.link }}" class="link">{{ article.title }}</a>
+        </h3>
+        <p>{{ article.description }}</p>
+      </header>
+      <a href="{{ article.link }}" class="link primary"></a>
+    </article>
+  {% endfor %}
+</section>
