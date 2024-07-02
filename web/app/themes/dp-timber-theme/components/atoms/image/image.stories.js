@@ -19,7 +19,6 @@ export const Default = Template.bind({});
 Default.args = {
   src: "https://via.placeholder.com/150",
   alt: "Placeholder Image",
-  classes: "img-fluid",
   width: 150,
   height: 150,
 };
