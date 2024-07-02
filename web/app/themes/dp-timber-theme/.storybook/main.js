@@ -56,7 +56,7 @@ const config = {
     });
     const twigAlias = {
       "@atoms": path.resolve(__dirname, '../', 'components/atoms'),
-      "@molecules": path.resolve(__dirname, '../', 'components/molecules'),
+      "@molecules": path.resolve(__dirname, '../', 'components/molecule'),
       "@organisms": path.resolve(__dirname, '../', 'components/organisms'),
       "@templates": path.resolve(__dirname, '../', 'components/templates'),
       "@pages": path.resolve(__dirname, '../', 'components/pages'),
