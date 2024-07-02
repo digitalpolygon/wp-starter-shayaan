@@ -1,4 +1,5 @@
 // Import Bootstrap icons
+@use "../../SCSS/_variables/index.scss" as var;
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .icon {
@@ -33,7 +34,7 @@
 	}
 
 	&.alt:before {
-		background-color: #ffffff;
+		background-color: var.$white;
 		border-radius: 100%;
 		color: #242943;
 		display: inline-block;
@@ -45,16 +46,13 @@
 }
 
 a.icon.alt:before {
-	-moz-transition: background-color 0.2s ease-in-out;
-	-webkit-transition: background-color 0.2s ease-in-out;
-	-ms-transition: background-color 0.2s ease-in-out;
-	transition: background-color 0.2s ease-in-out;
+	@include var.transition-properties((background-color), 0.2s);
 }
 
 a.icon.alt:hover:before {
-	background-color: #6fc3df;
+	background-color: var.$viking;
 }
 
 a.icon.alt:active:before {
-	background-color: #37a6cb;
+	background-color: var.$shakepseare;
 }

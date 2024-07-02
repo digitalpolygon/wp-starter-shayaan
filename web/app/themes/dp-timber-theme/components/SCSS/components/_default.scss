@@ -9,14 +9,14 @@ h6 {
   color: var.$white;
   font-weight: 600;
   line-height: 1.65;
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 
 p {
   font-size: 0.7em;
   font-weight: 600;
   letter-spacing: 0.25em;
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
   text-transform: uppercase;
   color: var.$white;
 }
@@ -37,10 +37,10 @@ header {
 
 header> :first-child:after {
   content: '';
-  background-color: #ffffff;
+  background-color: var.$white;
   display: block;
   height: 2px;
-  margin: 0.325em 0 0.5em 0;
+  margin: 0.325em 0 0.5em;
   width: 100%;
 }
 
@@ -63,13 +63,13 @@ section {
   background-color: var.$martinique;
 
   .inner {
-    padding: 4em 0 2em 0;
+    padding: 4em 0 2em;
     margin: 0 auto;
     max-width: 65em;
     width: calc(100% - 6em);
 
-    @media screen and (max-width: 736px) {
-      padding: 3em 0 1em 0;
+    @media screen and (max-width: var.$md) {
+      padding: 3em 0 1em;
       width: calc(100% - 3em);
     }
   }

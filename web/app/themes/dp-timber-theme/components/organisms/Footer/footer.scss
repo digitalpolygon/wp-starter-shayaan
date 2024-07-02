@@ -12,8 +12,8 @@ footer {
 		padding-left: 0;
 
 		li {
-			border-left: solid 1px rgba(212, 212, 255, 0.1);
-			color: rgba(244, 244, 255, 0.2);
+			border-left: solid 1px var.$footer-border-color;
+			color: var.$footer-color;
 			display: inline-block;
 			line-height: 1;
 			margin-left: 1em;
@@ -48,23 +48,22 @@ footer {
 			}
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: var.$md) {
 			li {
 				padding: 0 0.75em 0 0;
 			}
 		}
 
-		@media screen and (max-width: 480px) {
-
-			.copyright li {
-				display: block;
-				border-left: 0;
-				margin-left: 0;
-				padding-left: 0;
-				line-height: inherit;
+		@media screen and (max-width: var.$sm) {
+			.copyright {
+				li {
+					display: block;
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+					line-height: inherit;
+				}
 			}
-
 		}
 	}
-
 }

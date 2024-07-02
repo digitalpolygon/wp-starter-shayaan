@@ -1,5 +1,4 @@
 import createCTA from "./cta.twig";
-import "./cta.scss";
 
 export default {
   title: "Molecules/CTA",

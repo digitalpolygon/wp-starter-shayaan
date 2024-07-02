@@ -1,6 +1,4 @@
 @use "../../SCSS/_variables/index.scss" as var;
-@use "../../SCSS/components/default";
-
 
 .tiles {
 	@include var.displayFlex;
@@ -10,7 +8,7 @@
 		@include var.displayFlex;
 		@include var.flexCenter;
 		@include var.transition-opacity(0.25s);
-		padding: 4em 4em 2em 4em;
+		padding: 4em 4em 2em;
 		@include var.background;
 		height: 40vh;
 		max-height: 40em;
@@ -61,7 +59,7 @@
 
 		&:after {
 			content: "";
-			background-color: rgba(36, 41, 67, 0.25);
+			background-color: var.$tiles-bg-color;
 			display: block;
 			height: 100%;
 			left: 0;
@@ -110,24 +108,24 @@
 		}
 	}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: var.$xl) {
 		article {
-			padding: 4em 3em 2em 3em;
+			padding: 4em 3em 2em;
 			height: 30vh;
 			max-height: 30em;
 			min-height: 20em;
 		}
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: var.$lg) {
 		article {
 			width: 50% !important;
 		}
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: var.$md) {
 		article {
-			padding: 3em 1.5em 1em 1.5em;
+			padding: 3em 1.5em 1em;
 			height: 16em;
 			max-height: none;
 			min-height: 0;
@@ -138,7 +136,7 @@
 		}
 	}
 
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: var.$sm) {
 		display: block;
 
 		article {

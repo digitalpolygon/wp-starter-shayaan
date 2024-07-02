@@ -1,7 +1,6 @@
 import "./footer.scss"
 import footers from "./footer.twig";
 
-
 export default {
 	title: "organisms/Footers",
 	render: ({ ...args }) => {
