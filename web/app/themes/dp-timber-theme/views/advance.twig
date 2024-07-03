@@ -1,0 +1,50 @@
+{% extends "base.twig" %}
+{% import 'macros.twig' as macros %}
+
+{% block content %}
+
+<div class="container">
+	<form class="mt-4 mb-5">
+		<p class="m-0 lead">Here we using macro to print the input</p>
+		{{ macros.input('name', 'text', '', 'Enter your Name') }}
+		{{ macros.input('phone', 'number', '', 'Enter your Phone Number') }}
+		{{ macros.input('username', 'text', '', 'Enter your username') }}
+		{{ macros.input('password', 'password', '', 'Enter your password') }}
+		
+        {{ macros.button('Submit', '#', 'btn btn-success') }}
+	</form>
+
+    <h3>Item List</h3>
+    <p>I created an Macro to pass the Array and List will be created</p>
+    {% set items = ['Items 1', 'Items 2', 'Items 3'] %}
+    {{ macros.itemList(items)  }}
+
+    <section class="bg-light rounded p-3 shadow-sm mt-3 mb-3">
+        <h3>Custom Twig Filters</h3>
+
+        <hr>
+
+        {# Reverse String #}
+        <p>Reverse String: {{ "Hello Wordpress" | reverse }}</p>
+
+        {# This Filter add Space in Between Words #}
+        <p>Spaced Text: {{ 'Hello, World!' | space_between_letters }}</p>
+
+        {# Remove Alternate words #}
+        <p>Filtered Text: {{ 'This is an example string to test the filter.' | remove_alternate_words }}</p>
+
+        <hr>
+
+        <h4>Twig Extension</h4>
+
+        {# Using the date extension #}
+        <p>Current Date: {{ "now"|date("F j, Y, g:i a") }}</p>
+
+        <p class="lead">
+            We can add more Extension by adding them using <code>composer require twig/extensions</code>
+        </p>
+
+    </section>
+</div>
+
+{% endblock %}
