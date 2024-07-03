@@ -16,7 +16,8 @@
 $context          = Timber::context();
 $context['posts'] = Timber::get_posts();
 $context['foo'] = 'Shayaan';
-$templates        = array( 'index.twig' );
+$context['qux'] = 'lorem ipsum doller si amut  ';
+$templates        = array( 'variables.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }

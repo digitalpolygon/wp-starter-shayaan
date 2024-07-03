@@ -1,0 +1,55 @@
+{# my content will attach to base file #}
+{% extends "base.twig" %}
+
+{# This is the content block given in Base Twig File #}
+{% block content %}
+
+    {# This is comment #}
+    {# {% this is called statement %} #}
+    {# {{ This is called Expression  }} #}
+
+    {# this is my variable #}
+	<h2>{{ foo }}</h2>
+
+    {# using filter in variable #}
+	<p>{{ qux | upper }}</p>
+	<p>{{ qux | length }}</p>
+	<p>{{ qux | truncate(3) }}</p>
+
+    {# Setting up Variable #}
+    {% set username = 'Elon Doe' %}
+    {% set age = 34 %}
+
+    <p>Name: {{ username }} </p>
+    <p>Age : {{ age }} </p>
+
+    {# Conditional If Else #}
+    {% if age > 40 %}
+        <p>{{ username }} is in his Forties</p>
+    {% elseif age > 30 %}
+        <p>{{ username }} is in his Thirties</p>
+    {% elseif age > 20 %}
+        <p>{{ username }} is in his Twenties</p>    
+    {% else %}
+        <p>{{ username }} is {{ age }} years old</p>
+    {% endif %}
+
+    {# Loop Over Items  #}
+
+    {# Basic Loop to Iterate over Items #}
+    {% set items = ['Item 1', 'Item 2', 'Item 3'] %}
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+	{% for post in posts %}
+        {# Here we are include Another Twig File. Also based on the post type we are viewing Twig File or else tease.teig is shown #}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+
+    {# For Block & Extends we are already extnding this variable File to base.twig #}
+	
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}
