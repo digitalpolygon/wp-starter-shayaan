@@ -1,5 +1,5 @@
-@use "../../SCSS/_variables/index.scss" as var;
-@use "../../SCSS/components/default";
+@use "../../scss/_variables/index.scss" as var;
+@use "../../scss/components/default";
 
 .hero {
 	@include var.displayFlex;
@@ -9,6 +9,7 @@
 	@include var.background;
 	border-bottom: 0;
 	height: 60vh;
+	margin-bottom: -3.25em;
 	max-height: 32em;
 	min-height: 22em;
 	position: relative;

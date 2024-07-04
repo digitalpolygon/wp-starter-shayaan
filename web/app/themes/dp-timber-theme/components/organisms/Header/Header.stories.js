@@ -1,4 +1,4 @@
-import header from "./Header.twig";
+import header from "./header.twig";
 // import menuData from "./menus.yml";
 import menuData from "./menus.json";
 

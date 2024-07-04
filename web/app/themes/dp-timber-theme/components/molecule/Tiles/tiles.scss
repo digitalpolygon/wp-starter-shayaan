@@ -1,4 +1,4 @@
-@use "../../SCSS/_variables/index.scss" as var;
+@use "../../scss/_variables/index.scss" as var;
 
 .tiles {
 	@include var.displayFlex;
