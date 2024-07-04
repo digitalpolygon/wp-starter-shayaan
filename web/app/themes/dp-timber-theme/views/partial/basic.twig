@@ -1,0 +1,48 @@
+{# This is comment #}
+{# {% this is called statement %} #}
+{# {{ This is called Expression  }} #}
+
+{# this is my variable #}<h2>{{ foo }}
+</h2>
+
+{# using filter in variable #}<p>{{ description | upper }}
+</p><p>{{ description | length }}
+</p><p>{{ description | truncate(3) }}
+</p>
+
+{# Setting up Variable #}
+{% set username = 'Elon Doe' %}
+{% set age = 34 %}<p>
+	Name:
+{{ username }}
+</p><p>
+	Age :
+{{ age }}
+</p>
+
+{# Conditional If Else #}
+	{% if age > 40 %}<p>
+		{{ username }}is in his Forties
+	</p>
+{% elseif age > 30 %}
+	<p>{{ username }}
+		is in his Thirties</p>
+{% elseif age > 20 %}
+	<p>{{ username }}
+		is in his Twenties</p>
+{% else %}
+	<p>{{ username }}
+		is
+		{{ age }}
+		years old</p>
+{% endif %}
+
+{# Loop Over Items  #}
+
+{# Basic Loop to Iterate over Items #}
+{% set items = ['Item 1', 'Item 2', 'Item 3'] %}
+<ul>
+	{% for item in items %}
+		<li>{{ item }}</li>
+	{% endfor %}
+</ul>
