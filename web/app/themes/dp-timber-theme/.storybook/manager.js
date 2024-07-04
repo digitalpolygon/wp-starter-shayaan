@@ -19,7 +19,6 @@ addons.setConfig({
     appContentBg: "#ffffff",
     appPreviewBg: "#ffffff",
     appBorderColor: "#585C6D",
-    // appBorderColor: "#0a6aff",
     appBorderRadius: 4,
 
     // Text colors
