@@ -1,4 +1,6 @@
 /** @type { import('@storybook/html').Preview } */
+import { themes } from "@storybook/theming";
+
 import "bootstrap/scss/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
@@ -75,6 +77,9 @@ const preview = {
     },
     viewport: {
       viewports: deviceViewports,
+    },
+    docs: {
+      themes: themes.light,
     },
   },
 };
