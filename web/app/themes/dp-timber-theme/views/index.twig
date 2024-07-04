@@ -4,6 +4,21 @@
 
 	{% include "partial/advance.twig" %}
 
+	{# Looping throught Posts #}
+	<div class="row p-3">
+		{% for post in posts %}
+		<div class="col">
+			{% include "@molecule/card/card.twig" with {
+				cardHeader: post.post_title,
+				cardImage: "https://picsum.photos/seed/picsum/300/200",
+				cardTitle: post.post_title,
+				cardDescription: post.post_excerpt,
+				cardDate: post.post_date,
+			} %}
+		</div>
+		{% endfor %}
+	</div>
+
 	<h2>{{ foo }}</h2>
 	<p>{{ decription }}</p>
 	{% for post in posts %}
