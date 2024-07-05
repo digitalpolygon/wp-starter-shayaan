@@ -8,9 +8,9 @@
 		@include var.displayFlex;
 		@include var.flexCenter;
 		@include var.transition-opacity(0.25s);
-		padding: 4em 4em 2em;
+		padding: 4em 5em 2em;
 		@include var.background;
-		height: 40vh;
+		height: 50vh;
 		max-height: 40em;
 		min-height: 23em;
 		overflow: hidden;

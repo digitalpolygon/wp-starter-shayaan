@@ -1,0 +1,21 @@
+{
+    "menu": [
+      {
+        "title": "Home",
+        "url": "/#"
+      },
+      {
+        "title": "Landing",
+        "url": "#"
+      },
+      {
+        "title": "Generic",
+        "url": "/generic"
+      },
+      {
+        "title": "Elements",
+        "url": "/blog"
+      }
+    ]
+  }
+  

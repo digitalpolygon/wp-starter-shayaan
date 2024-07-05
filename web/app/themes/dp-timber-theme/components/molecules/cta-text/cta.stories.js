@@ -1,4 +1,5 @@
 import createCTA from "./cta.twig";
+import "../../atoms/get-started/button.scss"
 
 export default {
   title: "Molecules/CTA",

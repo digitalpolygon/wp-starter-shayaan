@@ -1,7 +1,22 @@
 // Add global styling here.
-@use "SCSS/components/default";
+@use "scss/components/default";
+@use "./atoms/icon/icon.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 body {
 	padding: 0;
 	margin: 0;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+
+	&.is-preload #hero>.inner {
+		filter: blur(0.125em);
+		transform: translateX(-0.5em);
+		opacity: 0;
+	}
+
+	&.is-preload #hero:after {
+		opacity: 1.0;
+	}
 }

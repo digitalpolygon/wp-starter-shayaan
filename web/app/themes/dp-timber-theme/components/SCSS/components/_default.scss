@@ -9,7 +9,7 @@ h6 {
   color: var.$white;
   font-weight: 600;
   line-height: 1.65;
-  margin: 0 0 1em;
+  margin: 0 0 0.7em;
 }
 
 p {
@@ -32,16 +32,19 @@ h1 {
 }
 
 header {
-  margin-bottom: 2em;
+  .major {
+    width: max-content;
+    margin-bottom: 2em;
+  }
 }
 
-header> :first-child:after {
+header.major> :first-child:after {
   content: '';
   background-color: var.$white;
   display: block;
   height: 2px;
   margin: 0.325em 0 0.5em;
-  width: 100%;
+  width: calc(100% + 0.6em);
 }
 
 article,
@@ -58,9 +61,21 @@ section {
   display: block;
 }
 
+.image {
+  &.main {
+    display: block;
+    margin: 2.5em 0;
+    width: 100%;
+  }
+}
 
 .main {
-  background-color: var.$martinique;
+
+  &.cta-text {
+    background-color: var.$ebony-clay;
+  }
+  // background-color: var.$martinique;
+  background-color: var.$ebony-clay;
 
   .inner {
     padding: 4em 0 2em;

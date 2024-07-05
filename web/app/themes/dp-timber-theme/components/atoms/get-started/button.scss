@@ -20,4 +20,28 @@ button {
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
+
+	svg {
+		filter: brightness(10);
+	}
+
+	&:hover {
+		opacity: 1;
+		box-shadow: inset 0 0 0 2px var.$anakiwa;
+		color: var.$anakiwa;
+		svg {
+			filter: unset;
+		}
+	}
+
+	&.fill {
+		background-color: var.$white;
+		color: var.$black;
+		svg {
+			filter: brightness(0);
+		}
+		&:hover {
+			background-color: var.$anakiwa;
+		}
+	}
 }

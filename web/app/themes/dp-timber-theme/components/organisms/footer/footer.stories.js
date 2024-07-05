@@ -1,5 +1,5 @@
-import "./footer.scss"
 import footers from "./footer.twig";
+import "./footer.scss"
 
 export default {
 	title: "organisms/Footers",
@@ -8,34 +8,34 @@ export default {
 	}
 }
 
-export const Default = {}
-
-Default.args = {
-	socialMediaIcons: [
-		{
-			"iconClass": "bi-twitter-x",
-			"label": "Twitter",
-			"url": "#"
-		},
-		{
-			"iconClass": "bi-facebook",
-			"label": "Facebook",
-			"url": "#"
-		},
-		{
-			"iconClass": "bi-instagram",
-			"label": "Instagram",
-			"url": "#"
-		},
-		{
-			"iconClass": "bi-github",
-			"label": "GitHub",
-			"url": "#"
-		},
-		{
-			"iconClass": "bi-linkedin",
-			"label": "LinkedIn",
-			"url": "#"
-		}
-	]
+export const Demo = {
+	args: {
+		socialMediaIcons: [
+			{
+				"iconClass": "bi-twitter-x",
+				"label": "Twitter",
+				"url": "#"
+			},
+			{
+				"iconClass": "bi-facebook",
+				"label": "Facebook",
+				"url": "#"
+			},
+			{
+				"iconClass": "bi-instagram",
+				"label": "Instagram",
+				"url": "#"
+			},
+			{
+				"iconClass": "bi-github",
+				"label": "GitHub",
+				"url": "#"
+			},
+			{
+				"iconClass": "bi-linkedin",
+				"label": "LinkedIn",
+				"url": "#"
+			}
+		]
+	}
 }

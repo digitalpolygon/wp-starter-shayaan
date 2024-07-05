@@ -1,12 +1,20 @@
-import button from "./button.twig"; // Get HTML TWIG
-import "./button.scss"; // Button Scss
+import button from "./button.twig";
+import "./button.scss";
 
 export default {
-  title: "Atoms/Get Started", // Get Started Name
+  title: "Atoms/Get Started",
+  argTypes: {
+    fill: {control: 'boolean'},
+    text: {control: 'text'}
+  },
   render: ({ ...args }) => {
     return button({ ...args });
   },
 };
 
-// I am not passing any Args for this Button
-export const Default = {};
+export const Default = {
+  args: {
+    fill: true,
+    text: "Get Started",
+  }
+};

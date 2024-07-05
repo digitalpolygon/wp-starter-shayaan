@@ -1,7 +1,7 @@
 <section class="tiles">
   {% for article in articles %}
     <article style="background-image: url('{{ article.imageUrl }}');">
-      <header>
+      <header class="major">
         <h3>
           <a href="{{ article.link }}" class="link">{{ article.title }}</a>
         </h3>

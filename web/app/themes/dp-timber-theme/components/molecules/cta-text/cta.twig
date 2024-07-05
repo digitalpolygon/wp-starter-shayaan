@@ -1,11 +1,15 @@
-<section class="main">
+<section class="main cta-text">
 	<div class="inner">
 		<header class="major">
 			<h2>{{ title  }}</h2>
 		</header>
 		<p>{{ subtitle  }}</p>
 		<ul class="actions list-unstyled">
-			<li>{% include '@atoms/get-started/button.twig' %}</li>
+			<li>{% include '@atoms/get-started/button.twig' with {
+				    fill: false,
+    				text: "Get Started",
+					width: "w"
+			} %}</li>
 		</ul>
 	</div>
 </section>

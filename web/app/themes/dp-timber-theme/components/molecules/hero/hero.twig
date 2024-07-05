@@ -7,7 +7,10 @@
 			<p class="">{{ subtitle | upper }}</p>
 			<ul class="actions list-unstyled">
 				<li>
-					{% include '@atoms/get-started/button.twig' %}
+					{% include '@atoms/get-started/button.twig' with {
+						    fill: false,
+    						text: "Get Started",
+					} %}
 				</li>
 			</ul>
 		</div>
