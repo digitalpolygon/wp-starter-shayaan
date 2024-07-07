@@ -12,6 +12,18 @@
 	z-index: 10000;
 	position: absolute;
 
+	&.is-preload ~ main > .hero .inner {
+		filter: blur(0.125em);
+		transform: translateX(-0.5em);
+		opacity: 0 !important;
+	}
+
+	&.is-preload {
+		animation: none !important;
+		transition: none !important;
+		opacity: 0;
+	}
+
 	.logo {
 		font-size: 0.8em;
 		padding: 0 1.5em;

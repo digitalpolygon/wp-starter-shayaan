@@ -2,23 +2,23 @@ window.addEventListener('DOMContentLoaded', () => {
 	const menu = document.querySelector('.open');
 	const close = document.querySelector('.close');
 	const body = document.getElementsByTagName('body');
+	const header = document.getElementById('header');
+	const hero = document.getElementsByClassName('hero')[0];
 
-	body[0].classList.add("is-preload");
 	setTimeout(() => {
-		body[0].classList.remove("is-preload");
-	}, 200);
+		console.log("Header Class Rmoved")
+		header.classList.remove("is-preload");
+	}, 100);
 
 	menu.addEventListener('click', (event) => {
 		event.preventDefault()
 		body[0].classList.add("is-menu-visible");
 	});
+
 	close.addEventListener('click', (event) => {
 		event.preventDefault()
 		body[0].classList.remove("is-menu-visible");
 	});
-
-	const header = document.getElementById('header');
-	const hero = document.getElementsByClassName('hero')[0];
 
 	function checkScroll() {
 		const heroRect = hero.getBoundingClientRect();

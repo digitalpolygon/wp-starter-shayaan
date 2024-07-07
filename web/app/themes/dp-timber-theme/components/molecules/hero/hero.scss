@@ -12,10 +12,27 @@
 	top: -3.25em;
 	height: 80vh;
 	color: var.$white;
-    min-height: 37em;
-    max-height: 40em;
+	min-height: 37em;
+	max-height: 40em;
+
+	&:after {
+		transition: opacity 2.5s ease;
+		transition-delay: 0.75s;
+		pointer-events: none;
+		background-color: #242943;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 0.85;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
 
 	.inner {
+		transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
 		margin: 0 auto;
 		max-width: 68em;
 		width: calc(100% - 6em);
