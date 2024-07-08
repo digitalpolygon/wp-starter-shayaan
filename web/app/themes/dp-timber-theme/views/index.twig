@@ -6,6 +6,23 @@
 
 	{% include "partial/basic.twig" %}
 
+	{# Displaying Custom Post Types Here #}
+	<h3 class="h3">Movies</h3>
+	<div class="row p-3">
+	 	{% for post in movies %}
+			<div class="col">
+				{% include "@molecule/card/card.twig" with {
+					cardHeader: post.link,
+					cardImage: post.thumbnail.src('large'),
+					cardTitle: post.post_title,
+					cardDescription: post.post_excerpt,
+					cardDate: post.post_date,
+				} %}
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Here I am Displaying the Wordpress Posts #}
 	{# Looping throught Posts #}
 	<div class="row p-3">
 		{% for post in posts %}
