@@ -1,6 +1,6 @@
 <label class="text-white text-uppercase" for="{{ name }}">{{ label }}</label>
 {% if type == "textarea" %}
-	<textarea name="{{ name }}" rows="6"></textarea>
+	<textarea name="{{ name }}" rows="6" data-testid="{{ name }}"></textarea>
 {% else %}
-	<input type="{{ type }}" name="{{ name }}">
+	<input type="{{ type }}" name="{{ name }}" data-testid="{{ name }}">
 {% endif %}
