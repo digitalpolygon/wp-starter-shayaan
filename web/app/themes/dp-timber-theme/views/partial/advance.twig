@@ -3,6 +3,7 @@
 <div class="container">
 	<form class="mt-4 mb-5">
 		<p class="m-0 lead">Here we using macro to print the input</p>
+        {# Here I used DRY, Instead of creating New Input I used Atoms #}
 		{{ macros.input('name', 'text', '', 'Enter your Name') }}
 		{{ macros.input('phone', 'number', '', 'Enter your Phone Number') }}
 		{{ macros.input('username', 'text', '', 'Enter your username') }}

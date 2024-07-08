@@ -12,7 +12,7 @@
  * @subpackage  Timber
  * @since   Timber 0.1
  */
-
+Timber::$cache = true; // Enabling Cache
 $context          = Timber::context();
 $context['posts'] = Timber::get_posts();
 $context['foo'] = 'Hello Twig!';

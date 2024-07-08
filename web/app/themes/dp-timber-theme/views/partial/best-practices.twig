@@ -1,0 +1,27 @@
+<div class="container p-3 mt-5 bg-light rounded">
+	{# Conditional rendering based on user existence #}
+	{% if username is defined %}
+		<p>Hello,
+			{{ username }}</p>
+	{% else %}
+		<p>User not found.</p>
+	{% endif %}
+
+	<hr>
+
+	{# Providing a default message for posts #}
+	{% set firstPost = posts | first %}
+	<p>{{ firstPost.title | default('No posts available') }}</p>
+
+	<hr>
+
+	{# Using elseif to handle different roles #}
+	{% if user.role == 'admin' %}
+		<p>Welcome, Admin!</p>
+	{% elseif user.role == 'editor' %}
+		<p>Welcome, Editor!</p>
+	{% else %}
+		<p>Welcome, User!</p>
+	{% endif %}
+    
+</div>
