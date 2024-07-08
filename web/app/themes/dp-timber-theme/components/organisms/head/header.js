@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const hero = document.getElementsByClassName('hero')[0];
 
 	setTimeout(() => {
+		console.log("Header Class Rmoved")
 		header.classList.remove("is-preload");
 	}, 100);
 
