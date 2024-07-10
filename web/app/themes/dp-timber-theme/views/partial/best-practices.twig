@@ -1,11 +1,12 @@
 <div class="container p-3 mt-5 bg-light rounded">
 	{# Conditional rendering based on user existence #}
-	{% if username is defined %}
-		<p>Hello,
-			{{ username }}</p>
-	{% else %}
-		<p>User not found.</p>
-	{% endif %}
+	<p>
+		{% if username is defined %}
+			Hello, {{ username }}</p>
+		{% else %}
+			User not found.
+		{% endif %}
+	</p>
 
 	<hr>
 
@@ -16,12 +17,14 @@
 	<hr>
 
 	{# Using elseif to handle different roles #}
-	{% if user.role == 'admin' %}
-		<p>Welcome, Admin!</p>
-	{% elseif user.role == 'editor' %}
-		<p>Welcome, Editor!</p>
-	{% else %}
-		<p>Welcome, User!</p>
-	{% endif %}
+	<p>
+		{% if user.role === 'admin' %}
+			Welcome, Admin!
+		{% elseif user.role === 'editor' %}
+			Welcome, Editor!
+		{% else %}
+			Welcome, User!
+		{% endif %}
+	</p>
     
 </div>
