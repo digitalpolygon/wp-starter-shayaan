@@ -1,7 +1,11 @@
 <main>
-{% include '@molecules/hero/hero.twig' with { bgImage: "https://html5up.net/uploads/demos/forty/images/banner.jpg", title: "Hi, my name is Forty", subtitle: "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP <br> AND RELEASED UNDER THE CREATIVE COMMONS." } %}
+  {% include '@molecules/hero/hero.twig' with { 
+    bgImage: "https://html5up.net/uploads/demos/forty/images/banner.jpg",
+    title: "Hi, my name is Forty",
+    subtitle: "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP <br> AND RELEASED UNDER THE CREATIVE COMMONS."
+  } %}
 
-{% include '@molecules/tiles/tiles.twig' with { articles: [
+  {% include '@molecules/tiles/tiles.twig' with { articles: [
       {
         imageUrl: 'https://html5up.net/uploads/demos/forty/images/pic01.jpg',
         title: 'Aliquam',
@@ -41,6 +45,8 @@
     ], } %}
 
 
-{% include '@molecules/cta-text/cta.twig' with {   title: "Massa libero",
-  subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.",  } %}
+  {% include '@molecules/cta-text/cta.twig' with {
+    title: "Massa libero",
+    subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
+  } %}
 </main>
