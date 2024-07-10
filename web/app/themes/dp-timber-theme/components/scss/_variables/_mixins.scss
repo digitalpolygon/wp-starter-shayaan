@@ -69,7 +69,6 @@
   filter: blur($blur);
 }
 
-
 @mixin transition-properties(
   $properties: (),
   $duration: 0.25s,

@@ -1,6 +1,21 @@
+<div class="main">
+  <section class="contact">
+    <div class="inner p-0">
+      <section>
+        {% include "@molecules/form/form.twig" %}
+      </section>
+      <section class="split p-0">
+        {% include "@molecules/contact-info/contact-info.twig" %}
+      </section>
+    </div>
+  </section>
+</div>
+
 <footer id="footer">
 	<div class="inner">
-		{% include "@molecules/icons/icons.twig" with { icons: socialMediaIcons} %}
+		{% include "@molecules/icons/icons.twig" with { 
+			icons: socialMediaIcons
+		} %}
 		<ul class="copyright">
 			<li>{% include "../../../views/footer.twig" %}</li>
 			

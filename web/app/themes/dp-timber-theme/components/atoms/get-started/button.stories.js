@@ -16,5 +16,6 @@ export const Default = {
   args: {
     fill: true,
     text: "Get Started",
+    show_arrow: false,
   }
 };

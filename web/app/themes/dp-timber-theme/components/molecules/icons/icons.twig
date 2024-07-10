@@ -2,7 +2,11 @@
 	<ul class="icons">
 		{% for icon in icons %}
 			<li>
-				{% include '@atoms/icon/icon.twig' with { iconclass: icon.iconClass, iconname: icon.label,url: icon.url } %}
+				{% include '@atoms/icon/icon.twig' with { 
+					iconclass: icon.iconClass, 
+					iconname: icon.label,
+					url: icon.url 
+				} %}
 			</li>
 		{% endfor %}
 	</ul>

@@ -2,28 +2,38 @@
 	<div class="fields d-flex">
 		<div class="field half">
 			{% include "@atoms/input/input.twig" with {
-                name: "name",
-                type: "text",
-                label: "Name"
-            } %}
+        name: "name",
+        type: "text",
+        label: "Name"
+      } %}
 		</div>
 		<div class="field half">
 			{% include "@atoms/input/input.twig" with {
-                name: "email",
-                type: "email",
-                label: "Email"
-            } %}
+        name: "email",
+        type: "email",
+        label: "Email"
+      } %}
 		</div>
 		<div class="field">
 			{% include "@atoms/input/input.twig" with {
-                name: "message",
-                type: "textarea",
-                label: "Message"
-            } %}
+        name: "message",
+        type: "textarea",
+        label: "Message"
+      } %}
 		</div>
 	</div>
 	<ul class="actions d-flex gap-3 list-unstyled ms-4">
-		<li>{% include "@atoms/get-started/button.twig" with { fill: true, text: "send message" } %}</li>
-		<li>{% include "@atoms/get-started/button.twig" with { fill: false, text: "clear" } %}</li>
+		<li>
+			{% include "@atoms/get-started/button.twig" with { 
+				fill: true,
+				text: "send message"
+			} %}
+		</li>
+		<li>
+			{% include "@atoms/get-started/button.twig" with { 
+				fill: false, 
+				text: "clear"
+			} %}
+		</li>
 	</ul>
 </form>

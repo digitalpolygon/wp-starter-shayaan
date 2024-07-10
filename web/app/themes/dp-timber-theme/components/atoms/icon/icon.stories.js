@@ -1,5 +1,5 @@
 import icons from "./icon.twig"; // Include HTML
-import "./icon.scss" // Inlcude SCSS
+import "./icon.scss" // Include SCSS
 
 export default {
 	title: "Atoms/Icon",
