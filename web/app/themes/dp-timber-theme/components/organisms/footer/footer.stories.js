@@ -1,9 +1,5 @@
 import footers from "./footer.twig";
-import "./footer.scss";
-import "../../molecules/form/form.scss"
-import "../../molecules/contact-info/contact-info.scss"
-import "../../atoms/get-started/button.scss"
-import { contactInfo } from "../../molecules/contact-info/contact-info.stories"
+import "./footer.scss"
 
 export default {
 	title: "organisms/Footers",
@@ -14,7 +10,6 @@ export default {
 
 export const Demo = {
 	args: {
-		...contactInfo.args,
 		socialMediaIcons: [
 			{
 				"iconClass": "bi-twitter-x",
