@@ -4,8 +4,8 @@ import "./button.scss";
 export default {
   title: "Atoms/Get Started",
   argTypes: {
-    fill: {control: 'boolean'},
-    text: {control: 'text'}
+    fill: { control: 'boolean' },
+    text: { control: 'text' }
   },
   render: ({ ...args }) => {
     return button({ ...args });

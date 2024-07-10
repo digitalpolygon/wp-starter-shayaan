@@ -4,9 +4,7 @@ import "./tiles.scss";
 export default {
   title: "Molecules/Tiles",
   tags: ["autodocs"],
-  argTypes: {
-    
-  },
+  argTypes: {},
   render: ({ articles = defaultArgs.articles }) => {
     return tiles({ articles });
   },

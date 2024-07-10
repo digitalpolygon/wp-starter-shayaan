@@ -12,7 +12,7 @@
 	z-index: 10000;
 	position: absolute;
 
-	&.is-preload ~ main > .hero .inner {
+	&.is-preload~main>.hero .inner {
 		filter: blur(0.125em);
 		transform: translateX(-0.5em);
 		opacity: 0 !important;
@@ -35,7 +35,7 @@
 				background-color: var.$anakiwa;
 			}
 		}
-	
+
 		&:active {
 			color: var.$malibu;
 
@@ -117,7 +117,7 @@
 		position: fixed;
 		animation: reveal-header 0.35s ease;
 	}
-	
+
 	@keyframes reveal-header {
 		0% {
 			top: -4em;
@@ -239,7 +239,7 @@
 		margin: 0 0 1em 0;
 
 		&.links {
-	
+
 			>li {
 				padding: 0;
 

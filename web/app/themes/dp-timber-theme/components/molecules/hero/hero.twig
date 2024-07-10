@@ -1,19 +1,19 @@
 <section class="hero" style="background-position: center 0px; background-image: url({{ bgImage  }});">
-	<div class="inner">
-		<header class="major">
-			<h1>{{ title }}</h1>
-		</header>
-		<div class="content">
-			<p class="">{{ subtitle | upper }}</p>
-			<ul class="actions list-unstyled">
-				<li>
-					{% include '@atoms/get-started/button.twig' with {
+  <div class="inner">
+    <header class="major">
+      <h1>{{ title }}</h1>
+    </header>
+    <div class="content">
+      <p class="">{{ subtitle | upper }}</p>
+      <ul class="actions list-unstyled">
+        <li>
+          {% include '@atoms/get-started/button.twig' with {
 					  fill: false,
     				text: "Get Started",
 						show_arrow: true
 					} %}
-				</li>
-			</ul>
-		</div>
-	</div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

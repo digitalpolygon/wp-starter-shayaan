@@ -83,17 +83,21 @@
 		max-height: none;
 		min-height: 0;
 		top: -2.75em;
+
 		h1 {
 			font-size: 2em;
 		}
+
 		&.major {
 			height: auto;
 			min-height: 0;
 			max-height: none;
 		}
+
 		>.inner {
 			.content {
 				display: block;
+
 				>* {
 					margin-right: 0;
 					margin-bottom: 2em;

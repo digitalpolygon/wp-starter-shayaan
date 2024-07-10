@@ -13,5 +13,5 @@ export const Default = {}
 Default.args = {
 	iconclass: "bi-facebook",
 	iconname: "Storybook",
-	url: "#"	
+	url: "#"
 }
