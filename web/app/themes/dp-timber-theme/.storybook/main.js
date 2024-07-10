@@ -41,6 +41,12 @@ const config = {
   },
   staticDirs: ['../assets'],
   webpackFinal: async (config) => {
+    config.watchOptions = {
+      aggregateTimeout: 300,
+      poll: 1000,
+      ignored: /node_modules/,
+    };
+    
     config.module.rules.push({
       test: /\.twig$/,
       use: [
