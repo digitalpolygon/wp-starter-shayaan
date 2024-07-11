@@ -1,45 +1,51 @@
 {% import './macros.twig' as macros %}
 
 <div class="container">
-	<form class="mt-4 mb-5">
-		<p class="m-0 lead">Here we using macro to print the input</p>
-		{{ macros.input('name', 'text', '', 'Enter your Name') }}
-		{{ macros.input('phone', 'number', '', 'Enter your Phone Number') }}
-		{{ macros.input('username', 'text', '', 'Enter your username') }}
-		{{ macros.input('password', 'password', '', 'Enter your password') }}
-		
-        {{ macros.button('Submit', '#', 'btn btn-success') }}
-	</form>
+  <form class="mt-4 mb-5">
+    <p class="m-0 lead">Here we using macro to print the input</p>
+    {# Here I used DRY, Instead of creating New Input I used Atoms #}
+    {{ macros.input('name', 'text', '', 'Enter your Name') }}
+    {{ macros.input('phone', 'number', '', 'Enter your Phone Number') }}
+    {{ macros.input('username', 'text', '', 'Enter your username') }}
+    {{ macros.input('password', 'password', '', 'Enter your password') }}
 
-    <h3>Item List</h3>
-    <p>I created an Macro to pass the Array and List will be created</p>
-    {% set items = ['Items 1', 'Items 2', 'Items 3'] %}
-    {{ macros.itemList(items)  }}
+    {{ macros.button('Submit', '#', 'btn btn-success') }}
+  </form>
 
-    <section class="bg-light rounded p-3 shadow-sm mt-3 mb-3">
-        <h3>Custom Twig Filters</h3>
+  <h3>Item List</h3>
+  <p>I created an Macro to pass the Array and List will be created</p>
+  {% set items = ['Items 1', 'Items 2', 'Items 3'] %}
+  {{ macros.itemList(items)  }}
 
-        <hr>
+  <section class="bg-light rounded p-3 shadow-sm mt-3 mb-3">
+    <h3>Custom Twig Filters</h3>
 
-        {# Reverse String #}
-        <p>Reverse String: {{ "Hello Wordpress" | reverse }}</p>
+    <hr>
 
-        {# This Filter add Space in Between Words #}
-        <p>Spaced Text: {{ 'Hello, World!' | space_between_letters }}</p>
+    {# Reverse String #}
+    <p>Reverse String:
+      {{ "Hello Wordpress" | reverse }}</p>
 
-        {# Remove Alternate words #}
-        <p>Filtered Text: {{ 'This is an example string to test the filter.' | remove_alternate_words }}</p>
+    {# This Filter add Space in Between Words #}
+    <p>Spaced Text:
+      {{ 'Hello, World!' | space_between_letters }}</p>
 
-        <hr>
+    {# Remove Alternate words #}
+    <p>Filtered Text:
+      {{ 'This is an example string to test the filter.' | remove_alternate_words }}</p>
 
-        <h4>Twig Extension</h4>
+    <hr>
 
-        {# Using the date extension #}
-        <p>Current Date: {{ "now"|date("F j, Y, g:i a") }}</p>
+    <h4>Twig Extension</h4>
 
-        <p class="lead">
-            We can add more Extension by adding them using <code>composer require twig/extensions</code>
-        </p>
+    {# Using the date extension #}
+    <p>Current Date:
+      {{ "now"|date("F j, Y, g:i a") }}</p>
 
-    </section>
+    <p class="lead">
+      We can add more Extension by adding them using
+      <code>composer require twig/extensions</code>
+    </p>
+
+  </section>
 </div>
