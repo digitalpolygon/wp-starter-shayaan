@@ -1,0 +1,114 @@
+@use "../../scss/_variables/index.scss" as var;
+
+.hero {
+	@include var.displayFlex;
+	@include var.flexCenter;
+	padding: 9em 0 2em;
+	background-attachment: fixed;
+	@include var.background;
+	border-bottom: 0;
+	margin-bottom: -3.25em;
+	position: relative;
+	top: -3.25em;
+	height: 80vh;
+	color: var.$white;
+	min-height: 37em;
+	max-height: 40em;
+
+	&:after {
+		transition: opacity 2.5s ease;
+		transition-delay: 0.75s;
+		pointer-events: none;
+		background-color: var.$ebony-clay;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 0.85;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.inner {
+		transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease, -webkit-filter 0.5s ease;
+		margin: 0 auto;
+		max-width: 68em;
+		width: calc(100% - 6em);
+		z-index: 2;
+
+		.content {
+			display: flex;
+			align-items: center;
+			margin: 0 0 2em 0;
+
+			p {
+				font-size: 0.7em;
+				font-weight: 600;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				margin-right: 1.5em;
+			}
+		}
+	}
+
+	&.major {
+		height: 75vh;
+		min-height: 30em;
+		max-height: 50em;
+	}
+
+	&::after {
+		content: "";
+		@include var.transition-opacity(0.25s);
+		pointer-events: none;
+		background-color: var.$ebony-clay;
+		display: block;
+		height: 100%;
+		left: 0;
+		opacity: 0.85;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@media screen and (max-width: var.$md) {
+	.hero {
+		padding: 5em 0 1em;
+		height: auto;
+		margin-bottom: -2.75em;
+		max-height: none;
+		min-height: 0;
+		top: -2.75em;
+
+		h1 {
+			font-size: 2em;
+		}
+
+		&.major {
+			height: auto;
+			min-height: 0;
+			max-height: none;
+		}
+
+		>.inner {
+			.content {
+				display: block;
+
+				>* {
+					margin-right: 0;
+					margin-bottom: 2em;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: var.$sm) {
+	.hero {
+		padding: 6em 0 2em;
+	}
+}

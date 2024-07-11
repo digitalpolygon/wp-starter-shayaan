@@ -1,0 +1,6 @@
+@use "../../scss/_variables/index.scss" as var;
+
+main {
+	border-bottom: solid 1px var.$footer-border-color;
+	background-color: var.$ebony-clay;
+}

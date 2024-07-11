@@ -2,7 +2,7 @@ import card from "./card.twig";
 import "./card.storybook.scss";
 
 export default {
-  title: "Molecule/Card",
+  title: "Molecules/Card",
   tags: ["autodocs"],
   argsTypes: {
     cardHeader: { control: "text" },

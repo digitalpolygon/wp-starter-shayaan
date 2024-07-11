@@ -1,0 +1,147 @@
+@use "../../scss/_variables/index.scss" as var;
+
+.tiles {
+	@include var.displayFlex;
+	@include var.flexWrap;
+
+	article {
+		@include var.displayFlex;
+		@include var.flexCenter;
+		@include var.transition-opacity(0.25s);
+		padding: 4em 5em 2em;
+		@include var.background;
+		height: 50vh;
+		max-height: 40em;
+		min-height: 23em;
+		overflow: hidden;
+		position: relative;
+		width: 40%;
+
+		.image {
+			display: none;
+		}
+
+		header {
+			position: relative;
+			z-index: 3;
+		}
+
+		h3 {
+			font-size: 1.75em;
+
+			a:hover {
+				color: inherit !important;
+			}
+		}
+
+		.link.primary {
+			border: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 4;
+		}
+
+		&:before {
+			content: "";
+			@include var.transition-opacity(0.5s);
+			bottom: 0;
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0.85;
+			position: absolute;
+			width: 100%;
+			z-index: 2;
+		}
+
+		&:after {
+			content: "";
+			background-color: var.$tiles-bg-color;
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		&:hover:before {
+			opacity: 0;
+		}
+
+		&.is-transitioning {
+			@include var.transform-scale-blur(0.95, 0.5em);
+			opacity: 0;
+		}
+
+		&:nth-child(4n - 1),
+		&:nth-child(4n - 2) {
+			width: 60%;
+		}
+
+		&:nth-child(6n - 5):before {
+			background-color: var.$viking;
+		}
+
+		&:nth-child(6n - 4):before {
+			background-color: var.$blue-bell;
+		}
+
+		&:nth-child(6n - 3):before {
+			background-color: var.$apricot;
+		}
+
+		&:nth-child(6n - 2):before {
+			background-color: var.$gold-sand;
+		}
+
+		&:nth-child(6n - 1):before {
+			background-color: var.$portage;
+		}
+
+		&:nth-child(6n):before {
+			background-color: var.$de-york;
+		}
+	}
+
+	@media screen and (max-width: var.$xl) {
+		article {
+			padding: 4em 3em 2em;
+			height: 30vh;
+			max-height: 30em;
+			min-height: 20em;
+		}
+	}
+
+	@media screen and (max-width: var.$lg) {
+		article {
+			width: 50% !important;
+		}
+	}
+
+	@media screen and (max-width: var.$md) {
+		article {
+			padding: 3em 1.5em 1em;
+			height: 16em;
+			max-height: none;
+			min-height: 0;
+
+			h3 {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	@media screen and (max-width: var.$sm) {
+		display: block;
+
+		article {
+			height: 20em;
+			width: 100% !important;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+@use "../../scss/_variables/index.scss" as var;
+
+form {
+  margin-bottom: 2em;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  .fields {
+    flex-wrap: wrap;
+    margin: -1.5em 0 2em;
+
+    .field {
+      flex: 0 0 auto;
+      padding: 1.5em 0 0 1.5em;
+      width: calc(100% - 1.5em);
+
+      &.half {
+        width: calc(50% - 0.75em);
+      }
+
+      &.third {
+        width: calc(100% / 3 - 0.5em);
+      }
+
+      &.quarter {
+        width: calc(25% - 0.375em);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: var.$sm) {
+  form {
+    .fields {
+      width: calc(100% + 3em);
+      margin: -1.5em 0 2em -1.5em;
+
+      .field {
+        width: calc(100% - 1.5em);
+
+        &.half,
+        &.third,
+        &.quarter {
+          width: calc(100% - 1.5em);
+        }
+      }
+    }
+  }
+}

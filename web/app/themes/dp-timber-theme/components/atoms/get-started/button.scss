@@ -1,0 +1,49 @@
+@use "../../scss/_variables/index.scss" as var;
+
+button {
+	@include var.transition-properties((background-color, box-shadow, color), 0.2s);
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	box-shadow: inset 0 0 0 2px var.$white;
+	color: var.$white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.5em;
+	letter-spacing: 0.25em;
+	line-height: 3.5em;
+	padding: 0 1.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	svg {
+		filter: brightness(10);
+	}
+
+	&:hover {
+		opacity: 1;
+		box-shadow: inset 0 0 0 2px var.$anakiwa;
+		color: var.$anakiwa;
+
+		svg {
+			filter: unset;
+		}
+	}
+
+	&.fill {
+		background-color: var.$white;
+		color: var.$black;
+
+		svg {
+			filter: brightness(0);
+		}
+
+		&:hover {
+			background-color: var.$anakiwa;
+		}
+	}
+}
