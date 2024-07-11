@@ -55,10 +55,6 @@ const config = {
           options: {},
         },
       ],
-    },
-    {
-      test: /\.yml$/,
-      use: "yaml-loader",
     });
     const twigAlias = {
       "@atoms": path.resolve(__dirname, '../', 'components/atoms'),

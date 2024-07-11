@@ -1,5 +1,5 @@
 import card from "./card.twig";
-import "./card.scss";
+import "./card.storybook.scss";
 
 export default {
   title: "Molecules/Card",

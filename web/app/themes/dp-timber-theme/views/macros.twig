@@ -1,0 +1,22 @@
+{# Macros For Input #}
+{% macro input(name, type, value, placeholder) %}
+<div class="mb-3 mt-2">
+	<input class="form-control" type="{{ type }}" name="{{ name }}" value="{{ value }}" placeholder="{{ placeholder }}"/>
+</div>
+{% endmacro %}
+
+
+{# Macros For Button #}
+{% macro button(text, url, class) %}
+	<a href="{{ url }}" class="{{ class }}">{{ text }}</a>
+{% endmacro %}
+
+
+{# List Items #}
+{% macro itemList(items) %}
+	<ul>
+		{% for item in items %}
+			<li>{{ item }}</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}
