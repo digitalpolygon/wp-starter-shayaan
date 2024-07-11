@@ -30,7 +30,8 @@ const config = {
           },
         ]
       }
-    }
+    },
+    "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/html-webpack5",
