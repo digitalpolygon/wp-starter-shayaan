@@ -1,16 +1,20 @@
 {% for method in contactMethods %}
-	<section class="contact-info position-relative">
-		<div class="contact-method position-relative">
-			{% include '@atoms/icon/icon.twig' with { iconclass: method.icon, iconname: method.title,url: method.url } %}
-			<span class="text-light icon solid alt {{ method.icon }}"></span>
-			<h3>{{ method.title }}</h3>
-			{% if method.title == 'Email' %}
-				<a class="text-light" href="{{ method.url }}">{{ method.url }}</a>
-			{% elseif method.title == 'Phone' %}
-				<span class="text-light">{{ method.url }}</span>
-			{% else %}
-				<span class="text-light">{{ method.url | raw }}</span>
-			{% endif %}
-		</div>
-	</section>
+  <section class="contact-info position-relative">
+    <div class="contact-method position-relative">
+      {% include '@atoms/icon/icon.twig' with { 
+				iconclass: method.icon,
+				iconname: method.title,
+				url: method.url 
+			} %}
+      <span class="text-light icon solid alt {{ method.icon }}"></span>
+      <h3>{{ method.title }}</h3>
+      {% if method.title == 'Email' %}
+        <a class="text-light" href="{{ method.url }}">{{ method.url }}</a>
+      {% elseif method.title == 'Phone' %}
+        <span class="text-light">{{ method.url }}</span>
+      {% else %}
+        <span class="text-light">{{ method.url | raw }}</span>
+      {% endif %}
+    </div>
+  </section>
 {% endfor %}

@@ -1,21 +1,21 @@
 @use "../../scss/_variables/index.scss" as var;
 
 .contact-info {
-    background-color : var.$ebony-clay;
-    padding: 3em 0 1em 3em;
+  background-color: var.$ebony-clay;
+  padding: 3em 0 1em 3em;
 
-    .contact-method {
-        margin-bottom: 2em;
-        padding-left: 3.25em;
+  .contact-method {
+    margin-bottom: 2em;
+    padding-left: 3.25em;
 
-        .icon {
-            left: 0;
-            position: absolute;
-            top: 0;
-        }
-
-        h3 {
-            margin-bottom: 0.5em;
-        }
+    .icon {
+      left: 0;
+      position: absolute;
+      top: 0;
     }
+
+    h3 {
+      margin-bottom: 0.5em;
+    }
+  }
 }

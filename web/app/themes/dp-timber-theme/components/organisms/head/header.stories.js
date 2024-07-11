@@ -6,7 +6,6 @@ import "../../atoms/get-started/button.stories.js"
 
 export default {
   title: "Organisms/Header",
-  tags: ["autodocs"],
   argTypes: {
       home: { control: "boolean" },
   },

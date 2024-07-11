@@ -1,40 +1,40 @@
-<header id="header" class="is-preload {{ home ? 'alt' : '' }} d-flex m-0 text-uppercase w-100 text-light">
-	<a href="#" class="logo border-0">
-		<strong>Forty</strong>
-		<span>by HTML5 UP</span>
-	</a>
-	<nav class="d-flex justify-content-end">
-		<a href="#menu" class="open d-block">Menu</a>
-	</nav>
+<header id="header" class="header is-preload {{ home ? 'alt' : '' }} d-flex m-0 text-uppercase w-100 text-light">
+  <a href="#" class="logo border-0">
+    <strong>Forty</strong>
+    <span>by HTML5 UP</span>
+  </a>
+  <nav class="d-flex justify-content-end">
+    <a href="#menu" class="open d-block">Menu</a>
+  </nav>
 </header>
 
-<nav id="menu" class=" d-flex align-items-center justify-content-center h-100 w-100 position-fixed text-center">
+<nav id="menu" class="menu d-flex align-items-center justify-content-center h-100 w-100 position-fixed text-center">
 
-	<div class="inner text-light mw-100">
+  <div class="inner text-light mw-100">
 
-		<ul class="links list-unstyled">
-			{% for menu in menuData %}
-				<li>
-					<a href="{{ menu.url }}">{{ menu.title }}</a>
-				</li>
-			{% endfor %}
-		</ul>
+    <ul class="links list-unstyled">
+      {% for menu in menuData %}
+        <li>
+          <a href="{{ menu.url }}">{{ menu.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
 
-		<ul class="actions stacked list-unstyled">
-			<li>
-				{% include '@atoms/get-started/button.twig' with {
+    <ul class="actions stacked list-unstyled">
+      <li>
+        {% include '@atoms/get-started/button.twig' with {
 					fill: true,
-    				text: "Get Started Now",
+    			text: "Get Started Now",
 				} %}
-			</li>
-			<li class="mt-3">
-				{% include '@atoms/get-started/button.twig' with {
+      </li>
+      <li class="mt-3">
+        {% include '@atoms/get-started/button.twig' with {
 					fill: false,
-    				text: "Log In",
+    			text: "Log In",
 				} %}
-			</li>
-		</ul>
+      </li>
+    </ul>
 
-	</div>
-	<a class="close text-end d-block border-0 position-absolute text-nowrap" href="#menu">Close</a>
+  </div>
+  <a class="close text-end d-block border-0 position-absolute text-nowrap" href="#menu">Close</a>
 </nav>

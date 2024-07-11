@@ -19,7 +19,7 @@
 		transition: opacity 2.5s ease;
 		transition-delay: 0.75s;
 		pointer-events: none;
-		background-color: #242943;
+		background-color: var.$ebony-clay;
 		content: '';
 		display: block;
 		height: 100%;
@@ -83,25 +83,27 @@
 		max-height: none;
 		min-height: 0;
 		top: -2.75em;
-	}
 
-	.hero h1 {
-		font-size: 2em;
-	}
+		h1 {
+			font-size: 2em;
+		}
 
-	.hero>.inner .content {
-		display: block;
-	}
+		&.major {
+			height: auto;
+			min-height: 0;
+			max-height: none;
+		}
 
-	.hero>.inner .content>* {
-		margin-right: 0;
-		margin-bottom: 2em;
-	}
+		>.inner {
+			.content {
+				display: block;
 
-	.hero.major {
-		height: auto;
-		min-height: 0;
-		max-height: none;
+				>* {
+					margin-right: 0;
+					margin-bottom: 2em;
+				}
+			}
+		}
 	}
 }
 
