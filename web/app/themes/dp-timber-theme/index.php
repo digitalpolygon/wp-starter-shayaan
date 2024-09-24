@@ -15,6 +15,14 @@
 Timber::$cache = true; // Enabling Cache
 $context          = Timber::context();
 $context['posts'] = Timber::get_posts();
+
+$args = array(
+    'post_type' => 'movie',
+    'posts_per_page' => 5,
+);
+$query = new WP_Query($args);
+$context['movies'] = new Timber\PostQuery($query);
+
 $context['foo'] = 'Hello Twig!';
 $context['description'] = 'lorem ipsum doller si amut  ';
 $templates        = array( 'index.twig' );

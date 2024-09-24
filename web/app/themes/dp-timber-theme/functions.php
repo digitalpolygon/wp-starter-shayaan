@@ -36,6 +36,17 @@ function add_custom_twig_filters($twig)
     return $twig;
 }
 
+// Register custom post type 'movie'
+function custom_register_movie_post_type() {
+    $args = array(
+        'public' => true,
+        'label'  => 'Movies',
+        'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    );
+    register_post_type( 'movie', $args );
+}
+
+add_action( 'init', 'custom_register_movie_post_type' );
 add_filter('timber/twig', 'add_custom_twig_filters');
 
 new StarterSite();
